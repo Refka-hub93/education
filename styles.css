@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --primary-color: #FE7EC9;
+    --light-color: #488DF4;
+    --dark-color: #42434b;
+    font-family: "Oswald", serif;
+    font-size: 1em;
+
+}
+
+body {
+    font-family: oswald;
+    background-color: white;
+    color: var(--dark-color);
+    text-align: center;
+}
+
+
+
+header {
+    align-items: center;
+    padding: 20px 20px 20px;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+
+header h1 {
+    color: var(--primary-color);
+    font-family: oswald;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    padding-left: 10px;
+
+}
+
+main {
+    padding-left: 0;
+}
+
+
+h2 {
+    color: var(--light-color);
+    text-transform: uppercase;
+}
+
+p {
+    color: var(--dark-color);
+    font-weight: bold;
+    padding: 10px;
+    font-size: 1.3rem;
+    margin: 10px 50px 10px 50px;
+}
+
+#enfant {
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 0;
+    height: auto;
+
+}
+
+.hero {
+
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+    font-size: 1.2rem;
+    color: #42434b;
+    font-weight: bold;
+
+}
+
+.philosophie {
+    background-color: #feca02;
+    padding: 20px;
+    width: 100%;
+
+    h3 {
+        color: white;
+    }
+
+}
+
+.apprentissage {
+
+    background-color: #38C4C1;
+
+    width: 100%;
+    padding: 20px;
+
+}
+
+.pratique {
+    background-color: var(--primary-color);
+    width: 100%;
+
+    padding: 20px;
+}
+
+.jeux {
+    background-color: var(--light-color);
+    width: 100%;
+    padding: 20px;
+}
+
+
+h4 {
+    padding-top: 30px;
+    color: #42434b;
+    font-weight: lighter;
+
+
+}
+
+h5 {
+    font-size: 1.3rem;
+    font-weight: lighter;
+}
+
+.seconde {
+
+    text-align: center;
+    margin: 20px 50px 20px 50px;
+
+
+
+    p {
+        font-size: 1.3rem;
+
+    }
+
+    img {
+        width: 100%;
+        margin-bottom: 5px;
+        padding: 0px;
+
+    }
+}
+
+.vert {
+
+    background-color: #38c4c230;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+
+    img {
+        padding-top: 10px;
+        width: 100px;
+        max-width: 60px;
+
+
+    }
+
+    a {
+        color: #38C4C1;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+}
+
+.rose {
+    background-color: #fe7ec944;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+
+    img {
+        padding-top: 10px;
+        width: 100%;
+        max-width: 60px;
+    }
+
+    a {
+        color: var(--primary-color);
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+}
+
+footer {
+    background-color: var(--dark-color);
+    padding: 20px;
+
+    p {
+        color: white;
+        font-weight: lighter;
+        font-size: 1rem;
+        font-family: oswald;
+    }
+
+
+}
+
+
+
+
+
+/* version tablette*/
+@media (min-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    #enfant {
+        margin-left: 0;
+        height: auto;
+        width: 100%;
+
+    }
+
+    .desktop {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        place-items: center;
+        
+
+        div {
+            margin: 30px;
+        }
+    }
+
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 2fr 2fr;
+        gap: 10px;
+
+    }
+
+    .rose,
+    .vert {
+        padding-top: 20px;
+        margin-bottom: 0;
+    }
+
+}
+
+
+/* version desktop*/
+@media (min-width: 1440px) {
+    header {
+
+        h1 {
+            margin-left: 30px;
+        }
+    }
+
+    .desktop {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        place-items: center;
+       
+
+
+    }
+
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .apprentissage,
+    .pratique,
+    .jeux,
+    .philosophie {
+        align-items: center;
+    }
+
+
+    .seconde {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-bottom: auto;
+
+    }
+
+    h3 {
+        padding-top: 30px;
+        font-weight: lighter;
+        font-size: 1rem;
+        color: var(--dark-color);
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-bottom: auto;
+
+    }
+
+    .rose,
+    .vert {
+        padding-top: 60px;
+    }
+
+    #beige,
+    #bleu {
+        min-height: auto;
+    }
+
+    #enfant2 {
+        height: auto;
+        max-height: 800px;
+    }
+
+
+}
