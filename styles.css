@@ -9,8 +9,9 @@
     --primary-color: #FE7EC9;
     --light-color: #488DF4;
     --dark-color: #42434b;
+    --dark-transparent: rgba(51, 51, 51, .7);
     font-family: "Oswald", serif;
-    font-size: 1em;
+    font-size: 15px;
 
 }
 
@@ -26,16 +27,56 @@ body {
 header {
     align-items: center;
     padding: 20px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+}
 
-    div {
-        display: flex;
-        justify-content: space-between;
+nav {
+    display: none;
+
+
+    &.open {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.381);
+        width: 100%;
+
+        ul {
+            background-color: var(--dark-color);
+            width: 50%;
+            padding-top: 50px;
+            height: 100%;
+
+
+            li {
+                line-height: 30px;
+
+                a {
+                    font-size: 1rem;
+                    color: white;
+                    text-decoration: none;
+
+                }
+            }
+        }
+
     }
 
-    nav {
-        display: none;
+    button {
+        color: white;
+        background-color: var(--dark-color);
+        font-size: 1rem;
+        position: absolute;
+        top: 20px;
+        left: 150px;
+
     }
 }
+
 
 
 header h1 {
@@ -49,6 +90,7 @@ header h1 {
 
 main {
     padding-left: 0;
+
 }
 
 
@@ -225,62 +267,166 @@ footer {
 
     header {
         padding: 20px;
-    }
 
-    #enfant {
-        margin-left: 0;
-        height: auto;
-        width: 100%;
+        nav {
 
-    }
 
-    .desktop {
-        display: grid;
-        grid-template-columns: 2fr 2fr;
-        place-items: center;
-        
+            &.open {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.381);
+                width: 100%;
 
-        div {
-            margin: 30px;
+
+                ul {
+                    background-color: var(--dark-color);
+                    width: 50%;
+                    padding-top: 50px;
+
+                    height: 100%;
+
+
+
+                    li {
+                        line-height: 40px;
+                        margin-top: 20px;
+
+                        a {
+                            text-decoration: none;
+                            font-size: 2rem;
+                            color: white;
+                        }
+                    }
+                }
+
+            }
+
+            button {
+                color: white;
+                background-color: var(--dark-color);
+                font-size: 2rem;
+                position: absolute;
+                top: 50px;
+                left: 400px;
+
+            }
         }
-    }
-
-    .hero {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .container {
-        display: grid;
-        grid-template-columns: 2fr 2fr;
-        grid-template-rows: 2fr 2fr;
-        gap: 10px;
 
     }
+}
 
-    .rose,
-    .vert {
-        padding-top: 20px;
-        margin-bottom: 0;
+#enfant {
+    margin-left: 0;
+    height: auto;
+    width: 100%;
+
+
+}
+
+.desktop {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    place-items: center;
+
+
+    div {
+        margin: 30px;
     }
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    gap: 10px;
+
+}
+
+.rose,
+.vert {
+    padding-top: 20px;
+    margin-bottom: 0;
+}
 
 }
 
 
 /* version desktop*/
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
     header {
 
-        h1 {
-            margin-left: 30px;
+
+        nav {
+
+
+            &.open {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.381);
+                width: 100%;
+
+
+                ul {
+                    background-color: var(--dark-color);
+                    width: 50%;
+                    padding-top: 50px;
+
+                    height: 100%;
+
+
+
+                    li {
+                        line-height: 40px;
+                        margin-top: 20px;
+
+                        a {
+                            text-decoration: none;
+                            font-size: 2rem;
+                            color: white;
+                        }
+                    }
+                }
+
+            
+
+            button {
+                color: white;
+                background-color: var(--dark-color);
+                font-size: 2rem;
+                position: absolute;
+                top: 50px;
+                left: 400px;
+            }
+
         }
     }
+    
+    }
+
+
+    h1 {
+        margin-left: 30px;
+    }
+
 
     .desktop {
         display: grid;
         grid-template-columns: 2fr 2fr;
         place-items: center;
-       
+
 
 
     }
@@ -335,7 +481,10 @@ footer {
     #enfant2 {
         height: auto;
         max-height: 800px;
+        padding-bottom: auto;
+
     }
+
 
 
 }
